@@ -1,1 +1,31 @@
 
+--select cust_id,cust_first_name,cust_last_name,cust_gender,cust_marital_status from sh.customers where cust_gender='F'
+--select cust_id,cust_first_name,cust_last_name from sh.customers where cust_last_name like 'S%' and cust_year_of_birth>1970
+--select prod_id,prod_name,prod_category,prod_list_price from sh.products where prod_list_price between 100 and 500
+--select prod_name from sh.products where prod_min_price<50 and prod_status='available'
+-- select prod_id,cust_id,quantity_sold from sh.sales where amount_sold>1000
+-- select *from sh.sales where quantity_sold>2 and channel_id=3
+-- select channel_id,channel_desc from sh.channels where channel_desc like '%Direct%'
+--select promo_id, promo_name, promo_cost, promo_category from sh.promotions where promo_cost > 1000
+--select PROMO_ID from sh.promotions where promo_end_date > promo_begin_date and promo_cost > 500
+--select country_id, country_name, country_region_id from sh.countries where country_region_id = 52790
+--select time_id, day_name, calendar_month_name, calendar_year from sh.times where calendar_year = 2000
+--select * from sh.times where calendar_month_name = 'december' and calendar_year = 2001
+--select prod_id, time_id, unit_cost, unit_price from sh.costs where unit_price > unit_cost
+--select * from sh.costs where unit_cost > 100 and unit_price < 1000
+--select cust_id,education,occupation,household_size from sh.supplementary_demographics where household_size >'3'
+--select CUST_MARITAL_STATUS, count(*) from sh.customers group by CUST_MARITAL_STATUS
+--select CUST_GENDER, avg(CUST_YEAR_OF_BIRTH) from sh.customers group By CUST_GENDER
+--select PROD_CATEGORY,avg(PROD_LIST_PRICE) from sh.PRODUCTS group by PROD_CATEGORY
+--select max(PROD_MIN_PRICE),prod_subcategory from sh.PRODUCTS group by PROD_SUBCATEGORY
+--select sum(AMOUNT_SOLD),CHANNEL_ID from sh.SALES group by CHANNEL_ID
+--select sum(quantity_sold) as Avg_Quantity_sold,PROD_ID from sh.SALES group by PROD_ID
+--select avg(amount_sold) as Avg_amount_sold,promo_id from sh.SALES group by PROMO_ID
+--select sum(promo_cost) as Avg_promo_cost,PROMO_CATEGORY from sh.promotions group by PROMO_CATEGORY
+--select COUNTRY_REGION,count(COUNTRY_ID) as num_of_countries from sh.COUNTRIES group by COUNTRY_REGION
+--select sum(unit_cost) as Avg_unit_cost,PROD_ID from sh.costs group by PROD_ID
+--select CUST_GENDER,cust_marital_status, count(CUST_ID) from sh.CUSTOMERS group by cust_gender,cust_marital_status
+--select PROD_CATEGORY,prod_subcategory,count(prod_id) from sh.PRODUCTS group by PROD_CATEGORY,PROD_SUBCATEGORY
+--select PROD_ID,CHANNEL_ID,sum(AMOUNT_SOLD) from sh.SALES group by prod_id,CHANNEL_ID
+--select PROMO_ID,CHANNEL_ID,sum(QUANTITY_SOLD) from sh.SALES group by PROMO_ID,CHANNEL_ID
+--select prod_id,PROMO_ID,avg(unit_cost)from sh.COSTS group by PROD_ID,PROMO_ID
